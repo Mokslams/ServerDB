@@ -1,13 +1,21 @@
-const enviroments = {};
+   
+const environments = {};
 
-enviroments.dev = {
-    httpPort:3000,
-    envName: "dev",
+environments.dev = {
+    httpPort: 3000,
+    envName: 'dev',
+    hashingSecret: 'dummy-secret',
+    defaultLang: 'en',
 };
 
-enviroments.production = {
-    httpPort:5000,
-    envName: "production",
+environments.production = {
+    httpPort: 5000,
+    envName: 'production',
+    hashingSecret: 'super-secret-salt-for-production-please-change-it-before-using-it-thanks',
+    defaultLang: 'lt',
 };
 
-module.exports = enviroments;
+const currentEnv = typeof process.env.NODE_ENV === 'string' ? process.env.NODE_ENV.toLowerCase() : '';
+const exportableEnvName = typeof environments[currentEnv] === 'object' ? currentEnv : 'dev';
+
+module.exports = environments[exportableEnvName];

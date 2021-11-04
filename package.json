@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Rimantas",
+  "author": "Edvinas",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.14"
