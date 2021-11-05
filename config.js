@@ -1,4 +1,3 @@
-   
 const environments = {};
 
 environments.dev = {
@@ -10,7 +9,7 @@ environments.dev = {
         host: 'localhost',
         user: 'root',
         database: 'todo',
-    }
+    },
 };
 
 environments.production = {
@@ -21,8 +20,8 @@ environments.production = {
     db: {
         host: 'localhost',
         user: 'root',
-        database: 'todo-deaf',
-    }
+        database: 'todo-d2f54',
+    },
 };
 
 const currentEnv = typeof process.env.NODE_ENV === 'string' ? process.env.NODE_ENV.toLowerCase() : '';
