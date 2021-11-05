@@ -1,4 +1,5 @@
 const mysql = require('mysql2/promise');
+const db = require('./lib/db');
 const server = require('./lib/server.js');
 
 const app = {};
