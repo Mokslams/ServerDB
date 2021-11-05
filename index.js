@@ -8,12 +8,8 @@ app.init = async () => {
     // pasiruosti pradinius folder'ius
     // pasiruosti pradinius failus
     // prisijungti prie DB
-    const connection = await mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        database: 'todo',
-    });
-
+    const connection = await db.init( config.db);
+    
     // uzkurti serveri
     server.init(connection);
 };
