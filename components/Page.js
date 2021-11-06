@@ -11,11 +11,11 @@ class Page {
         return this.baseURL + this.route + (this.route === '' ? '' : '/');
     }
 
-    bodyHTML() {
+  async  bodyHTML() {
         return `Page content`;
     }
 
-    render() {
+  async  render() {
         return `<!DOCTYPE html>
                 <html lang="en">
 
@@ -39,7 +39,7 @@ class Page {
                 </head>
 
                 <body>
-                    ${this.bodyHTML()}
+                    ${await this.bodyHTML()}
                 </body>
 
                 </html>`;
