@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table>
         <th>
-            <td>ID</td>
-            <td>Task name</td>
-            <td>Status</td>
-            <td>Action</td>
+        <td>ID</td>
+        <td>Task name</td>
+        <td>Status</td>
+        <td>Action</td>
         </th>
         <tr>
             <td></td>
@@ -22,5 +24,20 @@
 
         </tr>
     </table>
+    <form>
+
+        <label for="text">Text field</label>
+        <textarea id="text"></textarea>
+
+        <label for="status">Status:</label>
+        <select id="status">
+            <option value="1">New task</option>
+            <option value="2">In progress</option>
+            <option value="3">Done</option>
+        </select>
+
+        <button type="submit">Confirm task</button>
+    </form>
 </body>
+
 </html>

@@ -4,12 +4,13 @@
 @import '../base/layout.css';
 @import '../base/base.css';
 
+
 /* 3rd-party */
 
 /* components */
 @import '../components/button.css';
+@import '../components/form.css';
 @import '../components/table.css';
-
 
 /* CUSTOM PAGE STYLE */
 
