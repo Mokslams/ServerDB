@@ -1,16 +1,16 @@
-const Page = require('../components/Page.js');
+const Page = require("../components/Page.js");
 
 class PageNewTodo extends Page {
     constructor() {
         super();
-        this.route = '';
-        this.pageName = 'New';
-        this.pageTemplateName = 'home';
+        this.route = "";
+        this.pageName = "New";
+        this.pageTemplateName = "home";
     }
 
     bodyHTML() {
         return `<h1>New TODO</h1>
-        <a href="/" class="btn">Back to home</a>
+                <a href="/" class="btn">Back to home</a>
                 <form>
                     <label for="text">Text field</label>
                     <textarea id="text" placeholder="Your text here"></textarea>
@@ -22,7 +22,7 @@ class PageNewTodo extends Page {
                     </select>
                     <button type="submit" class="btn">Confirm task</button>
                 </form>
-                <script src="js/main.js"></script>`;
+                <script src="js/newTodo.js"></script>`;
     }
 }
 

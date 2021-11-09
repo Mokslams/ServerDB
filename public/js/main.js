@@ -1,1 +1,0 @@
-console.log('Labas, as is FRONTO');
