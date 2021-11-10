@@ -1,44 +1,34 @@
-const textarea = document.getElementById("text");
+const textArea = document.querySelector("#text");
 const submitButton = document.querySelector('form button[type="submit"]');
-
+const taskStatusDOM = document.querySelector('#status');
 
 const isEmpty = (value) => {
-    return !value;
+  return !value;
+};
+const sendTodoText = (value) => {
+    console.log(value);
+    
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState === 4) {
+      // Typical action to be performed when the document is ready:
+      console.log(xhttp.responseText);
+    }
+  };
+  xhttp.open("POST", "/api/task/", true);
+  xhttp.send(JSON.stringify(value));
+  
 };
 
-
-const sendTodo = (value) => {
-
-
-
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            // Typical action to be performed when the document is ready:
-            console.log(xhttp.responseText);
-        }
-    };
-    xhttp.open("POST", "/api", true);
-    xhttp.send(JSON.stringify(value));
-
-}
-
-submitButton.addEventListener('click', e => {
-    e.preventDefault();
-    const todo = {
-        text: textarea.value,
-    }
-    textarea.value;
-    if (!isEmpty(todo.text)) {
-        sendTodo(todo);
-    }
-    console.error("empty task!");
-
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const todoText = textArea.value;
+  if (!isEmpty(todoText)) {
+    sendTodoText({
+        textAreavalue: textArea.value,
+        taskStatus: taskStatusDOM.value
+    });
+    
+    
+  }
 });
-
-// textarea.addEventListener('keypress', e =>{
-//    if (e.key === "Enter") {
-//        console.log(textarea.value);
-//    }
-// });
-
